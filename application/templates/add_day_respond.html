@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    {% block content %}
+    <div class="container-sm px-5 py-5" id="term-form-result">
+
+
+        {% if success %}
+        <h2> Запрос за {{month}} {{day}} принят. </h2>
+
+        {% else %}
+
+        <h2> Неверный формат ввода. </h2>
+
+        {% endif %}
+
+
+        <a href="/"> На главную </a>
+
+    </div>
+    {% endblock %}
+
+
+</body>
+</html>

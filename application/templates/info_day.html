@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+<head>
+    <meta charset = 'UTF-8'>
+    <meta name = 'viewport' content='width=device-width, initial-scale=1.0'>
+    <title> Данные за день </title>
+</head>
+<body>
+
+    <h2> Какой день Вас интересует? </h2>
+    <form method = 'post'>
+        {% csrf_token %}
+        <label for='day'> День: </label><br>
+        <input type='number' id='day' name='day'><br><br>
+        <label for='month'> Месяц: </label><br>
+        <input type='text' id='month' name='month'><br><br>
+
+        <input type='submit' value='отправить' formaction='/info_day_submit/'><br><br>
+
+        <a href="/"> На главную </a>
+
+    </form>
+</body>
+</html>

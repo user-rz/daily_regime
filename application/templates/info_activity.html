@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+<head>
+    <meta charset = 'UTF-8'>
+    <meta name = 'viewport' content='width=device-width, initial-scale=1.0'>
+    <title> Данные по активности за месяц </title>
+</head>
+<body>
+
+    <h2> Какой месяц и какая активность Вас интересует? </h2>
+    <form method = 'post'>
+        {% csrf_token %}
+
+        <label for='month'> Месяц: </label><br>
+        <input type='text' id='month' name='month'><br><br>
+
+        <label for='activity'> Активность: </label><br>
+        <input type='text' id='activity' name='activity'><br><br>
+
+        <input type='submit' value='отправить' formaction='/info_activity_submit/'><br><br>
+
+        <a href="/"> На главную </a>
+
+    </form>
+</body>
+</html>

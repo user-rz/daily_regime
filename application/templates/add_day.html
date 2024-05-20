@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+<head>
+    <meta charset = 'UTF-8'>
+    <meta name = 'viewport' content='width=device-width, initial-scale=1.0'>
+    <title> Добавить день </title>
+</head>
+<body>
+
+    <h2> Добавить день </h2>
+    <form method = 'post'>
+        {% csrf_token %}
+        <label for='day'> День: </label><br>
+        <input type='number' id='day' name='day'><br><br>
+        <label for='month'> Месяц: </label><br>
+        <input type='text' id='month' name='month'><br><br>
+
+
+        <label> Сон: </label><br>
+
+        <label for='sleep_start_hour'> начало (час., мин.): </label><br>
+        <input type='number' id='sleep_start_hour' name='sleep_start_hour'>
+        <input type='number' id='sleep_start_minute' name='sleep_start_minute'><br>
+
+        <label for='sleep_start_hour'> конец (час., мин.): </label><br>
+        <input type='number' id='sleep_end_hour' name='sleep_end_hour'>
+        <input type='number' id='sleep_end_minute' name='sleep_end_minute'><br><br>
+
+
+        <label> Учёба: </label><br>
+
+        <label for='study_start_hour'> начало (час., мин.): </label><br>
+        <input type='number' id='study_start_hour' name='study_start_hour'>
+        <input type='number' id='study_start_minute' name='study_start_minute'><br>
+
+        <label for='study_start_hour'> конец (час., мин.): </label><br>
+        <input type='number' id='study_end_hour' name='study_end_hour'>
+        <input type='number' id='study_end_minute' name='study_end_minute'><br><br>
+
+
+        <label> Здоровье: </label><br>
+
+        <label for='health_start_hour'> начало (час., мин.): </label><br>
+        <input type='number' id='health_start_hour' name='health_start_hour'>
+        <input type='number' id='health_start_minute' name='health_start_minute'><br>
+
+        <label for='health_start_hour'> конец (час., мин.): </label><br>
+        <input type='number' id='health_end_hour' name='health_end_hour'>
+        <input type='number' id='health_end_minute' name='health_end_minute'><br><br>
+
+
+
+
+
+
+        <input type='submit' value='добавить' formaction='/add_day_submit/'> <br> <br>
+
+        <a href="/"> На главную </a>
+
+    </form>
+</body>
+</html>
